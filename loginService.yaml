@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: newdoin-login
+  name: newdoin-login
+spec:
+  ports:
+    - port: 80
+      targetPort: http
+  selector:
+    app: newdoin-login
+  type: LoadBalancer

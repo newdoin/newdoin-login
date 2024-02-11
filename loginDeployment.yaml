@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: newdoin-login
+  name: newdoin-login
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: newdoin-login
+  template:
+    metadata:
+      labels:
+        app: newdoin-login
+    spec:
+      containers:
+        - image: newdoinacr.azurecr.io/version-test:v1
+          name: newdoin-login
+          ports:
+            - name: http
+              containerPort: 8080
+      imagePullSecrets:
+      - name: newdoinacr-secret

@@ -10,4 +10,3 @@ spec:
       protocol: TCP
   selector:
     app: newdoin-login
-  type: LoadBalancer

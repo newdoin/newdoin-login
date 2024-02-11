@@ -7,7 +7,7 @@ metadata:
 spec:
   ports:
     - port: 80
-      targetPort: http
+      protocol: TCP
   selector:
     app: newdoin-login
   type: LoadBalancer
